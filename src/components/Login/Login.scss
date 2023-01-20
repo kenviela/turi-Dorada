@@ -1,0 +1,16 @@
+.Login{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title{
+    margin-top: 64px;
+    font-size: 40px;
+  }
+  &__landscape{
+    border-radius: 10px;
+  }
+  &__form{
+    margin-top:32px;
+  }
+}
