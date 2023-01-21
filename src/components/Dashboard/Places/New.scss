@@ -1,0 +1,44 @@
+@use "../../../index.scss";
+
+.New{
+  @extend .view;
+  &__title{
+    @extend .title;
+  }
+  &__return{
+    @extend .buttonCancel;
+    margin-top: 15px;
+  }
+}
+
+.PlaceForm{
+  @extend .view;
+  align-items: center;
+  &__label{
+    @extend .label;
+  }
+  &__input{  
+    @extend .input;
+  }
+  &__submit{
+    margin-top: 15px;
+    @extend .button;
+  }
+}
+
+.Category{
+  @extend .view;
+  &__select{
+    @extend .input;
+    padding: 1px 2px;
+    width: 86.5vw;
+    height: 32px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  &__label{
+    @extend .label;
+  }
+  &__option{
+    width: 100%;
+  }
+}

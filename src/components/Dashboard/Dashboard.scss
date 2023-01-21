@@ -31,6 +31,10 @@
   font-size: 20px;
   &__position{
     padding: 30px;
+    margin-top: 15px;
+  }
+  &__name{
+    min-width: 220px;
   }
   &__content{
     display: flex;
@@ -40,5 +44,6 @@
     border-radius: 5px;
     padding: 30px;
     width: 260px;
+    margin-top: 15px;
   }
 }
