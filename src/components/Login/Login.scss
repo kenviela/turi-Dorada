@@ -1,11 +1,12 @@
+@use "../../index.scss";
+
 .Login{
   display: flex;
   flex-direction: column;
   align-items: center;
 
   &__title{
-    margin-top: 64px;
-    font-size: 40px;
+    @extend .title;
   }
   &__landscape{
     border-radius: 10px;

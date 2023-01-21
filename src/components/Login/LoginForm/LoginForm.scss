@@ -1,3 +1,5 @@
+@use "../../../index.scss";
+
 .LoginForm{
   display: flex;
   flex-direction: column;
@@ -6,12 +8,12 @@
     margin-top: 16px;
   }
   &__input{
-    width: 85vw;
+
     height: 28px;
     margin-bottom: 2px;
   }
   &__submit{
     margin-top: 32px;
-    font-size: 30px;
+    @extend .button;
   }
 }

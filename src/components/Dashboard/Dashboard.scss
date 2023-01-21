@@ -1,0 +1,44 @@
+@use "../../index.scss";
+
+.Dashboard{
+  @extend .view;
+  &__topPlaces{
+    width: 85vw;
+  }
+  &__addPlace{
+    @extend .button;
+    margin-top: 32px;
+  }
+
+  &__title{
+    @extend .title;
+  }
+
+}
+
+.TopPlaces{
+  display: flex;
+  flex-direction: column;
+  list-style:none;
+  width: 100%;
+  padding: 0;
+}
+
+.Place{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 20px;
+  &__position{
+    padding: 30px;
+  }
+  &__content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border:1px solid #18ab29;
+    border-radius: 5px;
+    padding: 30px;
+    width: 260px;
+  }
+}
