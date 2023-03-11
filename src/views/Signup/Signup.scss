@@ -1,0 +1,10 @@
+@use "../../index.scss";
+.Signup{
+  @extend .view;
+  &__form{
+    &__submit{
+      margin-top: 32px;
+      @extend .button;
+    }
+  }
+}

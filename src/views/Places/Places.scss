@@ -1,0 +1,21 @@
+@use "../../index.scss";
+
+.Places{
+  @extend .view;
+  &__buttons{
+    @extend .view;
+    & button{
+      margin-top: 15px;
+    }
+    &__return{
+      @extend .buttonCancel
+    }
+  }
+}
+
+.PlaceForm{
+  &__button{
+    @extend .button;
+    margin-top: 15px;
+  }
+}

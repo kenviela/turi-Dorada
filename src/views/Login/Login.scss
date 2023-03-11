@@ -6,11 +6,9 @@
   align-items: center;
 
   &__title{
-    @extend .title;
+
   }
-  &__landscape{
-    border-radius: 10px;
-  }
+
   &__form{
     margin-top:32px;
   }

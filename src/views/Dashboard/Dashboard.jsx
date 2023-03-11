@@ -1,5 +1,6 @@
 import "./Dashboard.scss";
-
+import { Link } from "react-router-dom";
+import Title from "../../components/ViewTitle";
 const places = [
   {
     position: 1,
@@ -51,11 +52,15 @@ function Place(props) {
 function Dashboard() {
   return (
     <div className="Dashboard">
-      <h1 className="Dashboard__title">Turi-Dorada</h1>
+      <div>
+        <Title newTitle="Turi-Dorada"></Title>
+      </div>
       <div className="Dashboard__topPlaces">
         <TopPlaces></TopPlaces>
       </div>
-      <button className="Dashboard__addPlace">Nuevo lugar</button>
+      <Link to="/dashboard/places/new">
+        <button className="Dashboard__addPlace">Nuevo lugar</button>
+      </Link>
     </div>
   );
 }

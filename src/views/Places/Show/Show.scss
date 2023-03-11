@@ -1,0 +1,38 @@
+@use "../../../index.scss";
+
+.Show{
+  @extend .view;
+}
+.PlaceDescription{
+  @extend .view;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__img{
+    margin: 5%;
+    &__title{
+      margin-top: 5px;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    & img{
+      width:95%;
+      border-radius: 30px;
+      margin: 2%;
+    }
+  }
+  &__description{
+    border: 1px solid #4b4a4a;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:15px;
+    & p{
+      margin: 10px;
+    }
+  }
+}
