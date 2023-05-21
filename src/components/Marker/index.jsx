@@ -30,9 +30,14 @@ function Marker(props) {
         lng: event.latLng.lng(),
       });
   };
+
+  const handleOnClick = (event) => {
+    props.handleOnChangePlace && props.handleOnChangePlace(props.placeIndex);
+  };
   useEffect(() => {
     if (marker) {
       marker.addListener("mouseup", handleOnChangeMouseup);
+      marker.addListener("click", handleOnClick);
     }
   }, [marker]);
 

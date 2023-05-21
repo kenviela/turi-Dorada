@@ -11,7 +11,15 @@ function MapPlaces(props) {
   // props llega las positions
   const positions = props.positions;
   const markers = positions.map((position, index) => {
-    return <Marker position={position} draggable={false} key={index + "m"} />;
+    return (
+      <Marker
+        position={position}
+        handleOnChangePlace={props.handleOnChangePlace}
+        placeIndex={index}
+        draggable={false}
+        key={index + "m"}
+      />
+    );
   });
   return (
     <Wrapper apiKey={API_KEY} render={render}>

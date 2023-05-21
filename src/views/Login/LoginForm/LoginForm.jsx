@@ -1,13 +1,38 @@
 import "./LoginForm.scss";
 import Input from "../../../components/Input";
-import { useState } from "react";
+import useFetch from "../../../useFetch";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+const Swal = require("sweetalert2");
 function LoginForm() {
-  const [username, setUsername] = useState();
+  const { data, loading, error, makeRequest } = useFetch(
+    "http://localhost:8000/api/sessions/login"
+  );
+
+  const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
-  const handleOnChangeUsername = (event) => {
-    const username = event.target.value;
-    setUsername(username);
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (data?.token) {
+      localStorage.setItem("token", data.token);
+      navigate("/");
+    }
+  }, [data]);
+
+  useEffect(() => {
+    if (error) {
+      Swal.fire({
+        title: "Error",
+        text: error.message,
+        icon: "error",
+        confirmButtonText: "ok",
+      });
+    }
+  }, [error]);
+  const handleOnChangeEmail = (event) => {
+    const email = event.target.value;
+    setEmail(email);
   };
 
   const handleOnChangePassword = (event) => {
@@ -15,21 +40,22 @@ function LoginForm() {
     setPassword(password);
   };
 
-  const handleOnClick = (event) => {
+  const handleOnClick = async (event) => {
     event.preventDefault();
     const data = {
-      username,
+      email,
       password,
     };
+    await makeRequest({ data, method: "POST" });
     console.log(data);
   };
   return (
     <form className="LoginForm" onSubmit={handleOnClick}>
       <Input
-        type="text"
-        name="username"
-        labelText="Nombre"
-        onChange={handleOnChangeUsername}
+        type="email"
+        name="email"
+        labelText="Correo"
+        onChange={handleOnChangeEmail}
       />
       <Input
         type="password"

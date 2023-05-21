@@ -13,4 +13,8 @@
     margin-top: 16px;
     align-self: flex-start;
   }
+  &__errorMsg{
+    color: red;
+    align-self: flex-start;
+  }
 }

@@ -1,0 +1,13 @@
+@use "../../index.scss";
+
+.Restricted{
+  @extend .view;
+
+  &__msg{
+    margin: 15px;
+  }
+&__button{
+  @extend .button;
+  margin-top: 32px;
+}
+}

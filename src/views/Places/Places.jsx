@@ -1,14 +1,24 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Category from "../../components/Category";
 import Title from "../../components/ViewTitle";
 import "./Places.scss";
+import useFetch from "../../useFetch";
 
 const categories = ["Restaurante", "hotel", "parque", "piscina"];
 
 function PlaceForm() {
   const [category, setCategory] = useState();
 
+  const { data, error, loading, makeRequest } = useFetch(
+    "http://localhost:8000/api/places"
+  );
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (data) {
+      navigate("/places/show", { state: { places: data } });
+    }
+  }, [data]);
   const handleOnChangeCategory = (category) => {
     setCategory(category);
   };
@@ -18,6 +28,7 @@ function PlaceForm() {
     const place = {
       category,
     };
+    makeRequest({ params: place });
     console.log(place);
   };
   return (
@@ -26,9 +37,7 @@ function PlaceForm() {
         categories={categories}
         handleOnChangeCategory={handleOnChangeCategory}
       />
-      <Link to="/places/show">
-        <input type="submit" value="Buscar" className="PlaceForm__button" />
-      </Link>
+      <input type="submit" value="Buscar" className="PlaceForm__button" />
     </form>
   );
 }

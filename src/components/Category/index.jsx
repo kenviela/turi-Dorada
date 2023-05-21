@@ -23,7 +23,11 @@ function Category(props) {
         name="category"
         className="Category__select"
         onChange={handleOnChange}
+        defaultValue=""
       >
+        <option disabled value="">
+          selecciona una categoria
+        </option>
         {options}
       </select>
     </div>
