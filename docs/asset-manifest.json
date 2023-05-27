@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.2381342b.css",
-    "main.js": "/static/js/main.09ae90f4.js",
-    "static/js/787.0d0d0008.chunk.js": "/static/js/787.0d0d0008.chunk.js",
-    "index.html": "/index.html",
-    "main.2381342b.css.map": "/static/css/main.2381342b.css.map",
-    "main.09ae90f4.js.map": "/static/js/main.09ae90f4.js.map",
-    "787.0d0d0008.chunk.js.map": "/static/js/787.0d0d0008.chunk.js.map"
+    "main.css": "/turi-Dorada/static/css/main.2381342b.css",
+    "main.js": "/turi-Dorada/static/js/main.cd2b2a10.js",
+    "static/js/787.0d0d0008.chunk.js": "/turi-Dorada/static/js/787.0d0d0008.chunk.js",
+    "index.html": "/turi-Dorada/index.html",
+    "main.2381342b.css.map": "/turi-Dorada/static/css/main.2381342b.css.map",
+    "main.cd2b2a10.js.map": "/turi-Dorada/static/js/main.cd2b2a10.js.map",
+    "787.0d0d0008.chunk.js.map": "/turi-Dorada/static/js/787.0d0d0008.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2381342b.css",
-    "static/js/main.09ae90f4.js"
+    "static/js/main.cd2b2a10.js"
   ]
 }
