@@ -33,7 +33,7 @@ function PlaceDescription(props) {
   const [heartClicked, setHeartClicked] = useState("");
 
   const { data, error, loading, makeRequest } = useFetch(
-    `http://localhost:8000/api/places/show/like/${props.id}`
+    `/places/show/like/${props.id}`
   );
   useEffect(() => {
     if (data) {

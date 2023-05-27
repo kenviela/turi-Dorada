@@ -6,9 +6,7 @@ import "./Signup.scss";
 import useFetch from "../../useFetch";
 import { redirect, useNavigate } from "react-router-dom";
 function SignupForm() {
-  const { data, loading, error, makeRequest } = useFetch(
-    "http://localhost:8000/api/sessions/signup"
-  );
+  const { data, loading, error, makeRequest } = useFetch("/sessions/signup");
 
   const [name, setName] = useState();
   const [password, setPassword] = useState();

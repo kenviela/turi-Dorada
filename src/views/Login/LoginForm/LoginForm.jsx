@@ -5,9 +5,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 const Swal = require("sweetalert2");
 function LoginForm() {
-  const { data, loading, error, makeRequest } = useFetch(
-    "http://localhost:8000/api/sessions/login"
-  );
+  const { data, loading, error, makeRequest } = useFetch("/sessions/login");
 
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+const { REACT_APP_API_URL } = process.env;
 
 function buildUrlWithQueryParams(baseUrl, paramsObj) {
   const queryParams = new URLSearchParams(paramsObj).toString();
@@ -12,6 +13,7 @@ function useFetch(url) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   //const [controller, setController] = useState(null);
+  url = REACT_APP_API_URL + url;
   const makeRequest = async ({ data, params = {}, method = "GET" }) => {
     setLoading(true);
     try {

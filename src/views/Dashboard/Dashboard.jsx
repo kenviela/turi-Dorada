@@ -25,9 +25,7 @@ import { useEffect, useState } from "react";
 function TopPlaces() {
   const [places, setPlaces] = useState([]);
 
-  const { data, error, loading, makeRequest } = useFetch(
-    "http://localhost:8000/api/dashboard"
-  );
+  const { data, error, loading, makeRequest } = useFetch("/dashboard");
   useEffect(() => {
     makeRequest({});
   }, []);

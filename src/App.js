@@ -20,9 +20,7 @@ import Restricted from "./views/Restricted/Restricted";
 
 const roles = { ADMIN: "ADMIN", USER: "USER" };
 function PrivateRoute({ component: Component, role }) {
-  const { data, error, loading, makeRequest } = useFetch(
-    "http://localhost:8000/api/sessions/verify"
-  );
+  const { data, error, loading, makeRequest } = useFetch("/sessions/verify");
   const [token, setToken] = useState(() => localStorage.getItem("token"));
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 

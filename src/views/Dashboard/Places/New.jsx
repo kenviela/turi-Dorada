@@ -15,9 +15,7 @@ function PlaceForm() {
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState();
   const [position, setPosition] = useState();
-  const { data, error, loading, makeRequest } = useFetch(
-    "http://localhost:8000/api/places"
-  );
+  const { data, error, loading, makeRequest } = useFetch("/places");
 
   const navigate = useNavigate();
   useEffect(() => {
