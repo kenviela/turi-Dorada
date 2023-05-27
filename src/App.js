@@ -80,7 +80,8 @@ function App() {
         {/*<Route path="/places/show" element={<Show />} />*/}
 
         <Route path="/restricted" element={<Restricted />} />
-        <Route path="*" element={<Restricted />} />
+        {/*<Route path="*" element={<Restricted />} />*/}
+        <Route path="*" element={<Home />} />
       </Routes>
     </div>
   );
